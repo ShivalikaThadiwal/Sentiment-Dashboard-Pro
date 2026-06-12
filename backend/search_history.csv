@@ -1,0 +1,27 @@
+Timestamp,Text,Sentiment,Confidence
+2026-06-11 17:41:06,good,Negative,33.3%
+2026-06-11 17:41:58,it was amazing,Positive,40.3%
+2026-06-11 17:47:02,this was amazing,Positive,78.7%
+2026-06-11 17:47:18,worst case,Negative,91.9%
+2026-06-11 17:47:36,very  bad,Negative,91.9%
+2026-06-11 17:47:50,bad,Negative,91.2%
+2026-06-11 18:35:26,it was amazing,Positive,88.5%
+2026-06-11 18:35:39,great,Positive,88.5%
+2026-06-11 18:35:50,very good,Negative,85.4%
+2026-06-11 18:39:13,very good,Positive,94.0%
+2026-06-11 18:39:45,nice work,Positive,94.0%
+2026-06-11 18:41:07,superb,Positive,92.5%
+2026-06-11 18:41:55,average,Neutral,73.3%
+2026-06-11 18:51:47,great,Positive,91.5%
+2026-06-11 19:14:57,very good,Positive,87.5%
+2026-06-11 19:31:20,great work,Positive,88.0%
+2026-06-11 19:44:48,good,Positive,92.0%
+2026-06-11 19:44:58,it was amazing,Positive,92.0%
+2026-06-11 19:48:59,good,Positive,92.0%
+2026-06-11 19:49:02,good,Positive,92.0%
+2026-06-11 19:49:09,average,Neutral,77.0%
+2026-06-11 19:51:07,good,Positive,92.0%
+2026-06-11 19:51:26,it was amazing,Positive,92.0%
+2026-06-11 20:18:15,it was amazing,Positive,92.0%
+2026-06-11 20:18:34,good,Positive,92.0%
+2026-06-11 20:18:53,it was amazing,Positive,92.0%

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis - Enterprise Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line brand-icon"></i>
+                <h2>Sentiment Analysis</h2>
+            </div>
+            <nav class="menu">
+                <a href="index.html" class="menu-link"><i class="fa-solid fa-house"></i> Home Landing</a>
+                <a href="#" id="link-dashboard" class="menu-link active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+                <a href="auth.html" class="menu-link"><i class="fa-solid fa-right-to-bracket"></i> Login / Register</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+           <header class="top-header">
+    <h1>Dashboard Overview</h1>
+    <div class="user-profile">
+        <i class="fa-solid fa-bell"></i>
+        <div class="avatar" style="width: 40px; height: 40px; overflow: hidden; border-radius: 50%; display: flex; align-items: center; justify-content: center; background-color: #5b21b6;">
+            <img src="css/shivalika.jpg" alt="User" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Shivalika+Thadiwal&background=random';" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>
+</header>
+
+            <section class="stats-grid">
+                <div class="card total">
+                    <div class="card-info">
+                        <h3>Total Analyzed</h3>
+                        <p id="total-analyzed">0</p>
+                    </div>
+                    <i class="fa-solid fa-layer-group icon"></i>
+                </div>
+                <div class="card positive">
+                    <div class="card-info">
+                        <h3>Positive</h3>
+                        <p id="pos-count">0</p>
+                    </div>
+                    <i class="fa-solid fa-face-smile icon"></i>
+                </div>
+                <div class="card neutral">
+                    <div class="card-info">
+                        <h3>Neutral</h3>
+                        <p id="neu-count">0</p>
+                    </div>
+                    <i class="fa-solid fa-face-meh icon"></i>
+                </div>
+                <div class="card negative">
+                    <div class="card-info">
+                        <h3>Negative</h3>
+                        <p id="neg-count">0</p>
+                    </div>
+                    <i class="fa-solid fa-face-frown icon"></i>
+                </div>
+            </section>
+
+            <section class="workspace-section">
+                <div class="input-box">
+                    <h2><i class="fa-solid fa-keyboard"></i> Analyze Text Feedback</h2>
+                    <textarea id="feedback-text" placeholder="Paste or type your product feedback here..."></textarea>
+                    <div class="btn-group">
+                        <button id="run-analysis" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Run Analysis</button>
+                        <button id="clear-text" class="btn btn-secondary">Clear</button>
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <h2>Real-Time Analytics</h2>
+                    <div id="progress-circle" class="result-display" style="padding: 20px; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <div class="sentiment-tag" id="sentiment-badge" style="margin-bottom: 15px; font-weight: bold; font-size: 1.1rem;">NEUTRAL</div>
+                        <div class="progress-ring-container" style="text-align: center;">
+                            <div class="percentage-text" id="confidence-percentage" style="font-size: 2rem; font-weight: 800;">0%</div>
+                            <span class="sub-text" style="color: var(--text-muted);">Confidence</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2><i class="fa-solid fa-list-ul"></i> Recent History Log</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Raw Text</th>
+                                <th>Detected Sentiment</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

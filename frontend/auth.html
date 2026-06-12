@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentify - Gateway Access Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .auth-master-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1000px;
+            margin: 60px auto;
+            gap: 40px;
+            padding: 0 20px;
+        }
+        .auth-form-panel {
+            background-color: var(--sidebar-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .auth-form-panel h2 { text-align: center; font-size: 26px; font-weight: 700;}
+        .auth-form-panel p { text-align: center; color: var(--text-muted); font-size: 14px; margin-top: -15px; }
+        .input-wrapper { display: flex; flex-direction: column; gap: 8px; }
+        .input-wrapper label { font-size: 13px; font-weight: 500; color: var(--text-main); }
+        .input-wrapper input {
+            background: rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+            padding: 14px;
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s;
+        }
+        .input-wrapper input:focus { border-color: var(--accent-purple); }
+        .google-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+        .google-btn:hover { background: rgba(255,255,255,0.05); }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .divider:not(:empty)::before { margin-right: .5em; }
+        .divider:not(:empty)::after { margin-left: .5em; }
+    </style>
+</head>
+<body style="background-color: #0b0f19; color: white;">
+
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html" style="text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-face-smile-wink brand-icon" style="font-size: 32px;"></i>
+            <h1 style="font-size: 28px; font-weight: 800;">Sentify</h1>
+        </a>
+    </div>
+
+    <main class="auth-master-wrap">
+        <div class="auth-form-panel">
+            <h2>Login</h2>
+            <p>Welcome back! Secure access portal authentication.</p>
+            
+            <div class="input-wrapper">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your registered email">
+            </div>
+            <div class="input-wrapper">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your secret credentials">
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 13px; color: var(--text-muted);">
+                <label style="cursor: pointer;"><input type="checkbox" style="margin-right: 5px;"> Remember me</label>
+                <a href="#" style="color: var(--accent-purple); text-decoration: none;">Forgot password?</a>
+            </div>
+
+            <a href="dashboard.html" class="btn btn-primary" style="text-align: center; text-decoration: none;">Login</a>
+            <div class="divider">or</div>
+            <button class="btn google-btn"><i class="fa-brands fa-google" style="color: #ea4335;"></i> Continue with Google</button>
+        </div>
+
+        <div class="auth-form-panel">
+            <h2>Sign Up</h2>
+            <p>Create your infrastructure workspace account today.</p>
+
+            <div class="input-wrapper">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your username identity">
+            </div>
+            <div class="input-wrapper">
+                <label>Email Address</label>
+                <input type="email" placeholder="Configure admin user email">
+            </div>
+            <div class="input-wrapper">
+                <label>Password</label>
+                <input type="password" placeholder="Establish robust secure hash key">
+            </div>
+
+            <a href="dashboard.html" class="btn btn-primary" style="text-align: center; text-decoration: none; background: linear-gradient(135deg, #6366f1, #a855f7);">Sign Up</a>
+            <div class="divider">or</div>
+            <button class="btn google-btn"><i class="fa-brands fa-google" style="color: #ea4335;"></i> Continue with Google</button>
+        </div>
+    </main>
+
+</body>
+</html>
